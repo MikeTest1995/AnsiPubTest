@@ -1,0 +1,8 @@
+---
+
+- hosts: proxmox
+  tasks:
+  - name: Creating an empty file
+    file:
+      path: "/root/test123"
+      state: touch
