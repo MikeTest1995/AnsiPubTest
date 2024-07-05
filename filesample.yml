@@ -1,13 +1,12 @@
 ---
 
 - hosts: proxmox
-vars_prompt:
-
-    - name: String
+  vars_prompt:
+    - name: string
       prompt: What is your username?
       private: false
   tasks:
   - name: Creating an empty file
     file:
-      path: "/root/test123 {{ String }}"
+      path: "/root/test123 {{ string }}"
       state: touch
